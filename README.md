@@ -1,0 +1,2 @@
+# Libft
+First own library
