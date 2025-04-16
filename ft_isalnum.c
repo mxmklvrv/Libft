@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 12:46:46 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/15 16:24:12 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/16 15:45:58 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,4 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
+// sdkfsdksijkfgjg
