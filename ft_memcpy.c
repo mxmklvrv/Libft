@@ -1,19 +1,11 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/16 18:32:50 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/16 18:43:37 by mklevero         ###   ########.fr       */
+/*   Created: 2025/04/16 18:25:32 by mklevero          #+#    #+#             */
+/*   Updated: 2025/04/16 18:43:43 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stdlib.h>
-# include <unistd.h>
-/*below include function prototypes*/
-
-#endif

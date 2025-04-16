@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 16:19:59 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/16 17:18:07 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/16 18:43:40 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
+/*
 int	main(void)
 {
 	char str[50] = "ehal greka  cherez reku";
@@ -56,4 +57,4 @@ int	main(void)
 	printf("%s\n", str);
 	printf("%s\n", str_1);
 	return (0);
-}
+}*/
