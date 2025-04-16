@@ -2,28 +2,23 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+
-	+:+     */
-/*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+
-	+#+        */
-/*                                                +#+#+#+#+#+
-	+#+           */
-/*   Created: 2025/04/16 14:47:43 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/16 14:47:43 by mklevero         ###   ########.fr       */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/16 16:08:52 by mklevero          #+#    #+#             */
+/*   Updated: 2025/04/16 16:09:48 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
 size_t	ft_strlcat(char *dst, const char *src, size_t d_size)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;
-
 	while (dst[i] && i < d_size)
 		i++;
 	if (i >= d_size)
@@ -39,10 +34,12 @@ size_t	ft_strlcat(char *dst, const char *src, size_t d_size)
 
 int	main(void)
 {
-	char dst[67] = "odin";
-	char *src = "dva";
-	size_t res = ft_strlcat(dst, src, sizeof(dst));
+	char	dst[67] = "odin";
+	char	*src;
+	size_t	res;
 
+	src = "dva";
+	res = ft_strlcat(dst, src, sizeof(dst));
 	printf("%s\n", dst);
 	printf("%zu", res);
 }
