@@ -2,44 +2,47 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/16 12:47:50 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/16 12:47:50 by mklevero         ###   ########.fr       */
+/*                                                    +:+ +:+
+	+:+     */
+/*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+
+	+#+        */
+/*                                                +#+#+#+#+#+
+	+#+           */
+/*   Created: 2025/04/16 14:47:43 by mklevero          #+#    #+#             */
+/*   Updated: 2025/04/16 14:47:43 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcat(char *dst, const char *src, size_t d_size)
+
+size_t	ft_strlcat(char *dst, const char *src, size_t d_size)
 {
-    size_t i; //length of dest
-    size_t j; 
+	size_t i;
+	size_t j;
 
-    i = 0;
-    j = 0;
+	i = 0;
+	j = 0;
 
-    while(dst[i] && i < d_size) 
-        i++; 
-    if(i >= d_size)
-        return(d_size + ft_strlen(src));
-    while(src[j] && ((i + j + 1) < d_size))
-    {
-        dst[i + j] = src[j];
-        j++;
-    }
-    dst[i + j] = '\0';
-    return(i + ft_strlen(src));
+	while (dst[i] && i < d_size)
+		i++;
+	if (i >= d_size)
+		return (d_size + ft_strlen(src));
+	while (src[j] && ((i + j + 1) < d_size))
+	{
+		dst[i + j] = src[j];
+		j++;
+	}
+	dst[i + j] = '\0';
+	return (i + ft_strlen(src));
 }
 
-/*
-int main(void)
+int	main(void)
 {
-    char dst[15] = "odin";
-    char *src = "dva";
-    size_t res = ft_strlcat(dst, src, sizeof(dst));
+	char dst[67] = "odin";
+	char *src = "dva";
+	size_t res = ft_strlcat(dst, src, sizeof(dst));
 
-    printf("%zu", res);
-
-}*/
+	printf("%s\n", dst);
+	printf("%zu", res);
+}
