@@ -15,6 +15,7 @@ SRCS = function prototypes
 OBJ = $(SRCS:.c=.o)
 
 NAME = libft.a
+///////////////////////HEADER = libft.h
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
