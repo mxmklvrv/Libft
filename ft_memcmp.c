@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/17 15:44:00 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/17 18:22:58 by mklevero         ###   ########.fr       */
+/*   Created: 2025/04/17 17:27:29 by mklevero          #+#    #+#             */
+/*   Updated: 2025/04/17 18:22:54 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,36 +14,30 @@
 #include <stdio.h>
 #include <string.h>
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int		i;
-	int		len;
-	char	ch;
+	unsigned char	*copy_s1;
+	unsigned char	*copy_s2;
+	size_t			i;
 
-	ch = (char)c;
+	copy_s1 = (unsigned char *)s1;
+	copy_s2 = (unsigned char *)s2;
 	i = 0;
-	while (s[i])
+	while (i < n)
+	{
+		if (copy_s1[i] != copy_s2[i])
+			return (copy_s1[i] - copy_s2[i]);
 		i++;
-	len = i - 1;
-	while (s[len] != ch && len != 0)
-		len--;
-	if (s[len] == ch)
-		return ((char *)&s[len]);
-	else
-		return (NULL);
+	}
+	return (0);
 }
-/*
 int	main(void)
 {
-	char	str[] = "function returns a pointer";
-	char	c;
-	char	*ptr;
-	char	*pt;
+	char str[] = "123456789";
+	char str_1[] = "123456789656565655655";
 
-	c = 'f';
-	ptr = ft_strrchr(str, c);
-	pt = strrchr(str, c);
-	printf("%s\n", ptr);
-	printf("%s\n", pt);
+	int res = ft_memcmp(str, str_1, 10);
+	int res_1 = memcmp(str, str_1, 10);
+
+	printf("%d\n%d\n", res, res_1);
 }
-*/

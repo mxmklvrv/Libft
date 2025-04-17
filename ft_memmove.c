@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 14:25:21 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/17 14:40:33 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/17 17:59:02 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 int	main(void)
 {
 	char	src[30] = "abcdefghij";
-	char	dest[30];
-	char	src_1[30] = "abcdefghij";
-	char	src_2[30] = "abcdefghij";
+	char	dest[30] = "12345655";
+	char	src_1[30] = "123456789";
+	char	src_2[30] = "1234567";
 
 	ft_memmove(dest, src, 5);
 	ft_memmove(src_1 + 5, src_1, 5);
