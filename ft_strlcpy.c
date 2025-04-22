@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 16:07:18 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/22 14:32:50 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/22 16:25:32 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t n)
 
 	i = 0;
 	if (n > 0)
-    {
-        while (src[i] && i < (n - 1))
-	    {
-		    dst[i] = src[i];
-            i++;
-	    }
-	    dst[i] = '\0';
-    }
+	{
+		while (src[i] && i < (n - 1))
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
+	}
 	return (ft_strlen(src));
 }
 /*

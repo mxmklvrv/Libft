@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 14:23:49 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/17 14:44:04 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/22 15:53:26 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 int	main(void)
 {
 	int	src[5] = {9, 8, 7, 6, 5};
-	int	dest[5];
+	int	dest[5] = {};
 	int	src_1[5] = {9, 5, 7, 6, 5};
 	int	dest_1[5];
 
