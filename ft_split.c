@@ -5,116 +5,110 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/17 14:48:36 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/22 16:25:20 by mklevero         ###   ########.fr       */
+/*   Created: 2025/04/22 16:42:16 by mklevero          #+#    #+#             */
+/*   Updated: 2025/04/22 20:38:13 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
+static int	number_of_words(char const *s, char c);
+static char	*sep_words(char const *s, char c);
+static void	*free_sp(char **arr);
 
-char	*separating_words(char *str, char *sep);
-int		number_of_words(char *str, char *sep);
-int		separator(char c, char *sep);
-
-char	**ft_split(char *str, char *charset)
+char	**ft_split(char const *s, char c)
 {
 	char	**arr;
-	int		i;
+	int		j;
 
-	i = 0;
-	arr = malloc(sizeof(char *) * (number_of_words(str, charset) + 1));
+	j = 0;
+	if (s == NULL)
+		return (NULL);
+	arr = malloc(sizeof(char *) * (number_of_words(s, c) + 1));
 	if (arr == NULL)
 		return (NULL);
-	while (*str != '\0')
+	while (*s)
 	{
-		if (!separator(*str, charset))
+		if (*s != c)
 		{
-			arr[i] = separating_words(str, charset);
-			i++;
-			while (*str != '\0' && !separator(*str, charset))
-				str++;
+			arr[j] = sep_words(s, c);
+			if (!arr[j++])
+				return (free_sp(arr));
+			while (*s && *s != c)
+				s++;
 		}
 		else
-			str++;
+			s++;
 	}
-	arr[i] = NULL;
+	arr[j] = NULL;
 	return (arr);
 }
 
-int	separator(char c, char *sep)
+static void	*free_sp(char **arr)
 {
 	int	i;
 
 	i = 0;
-	while (sep[i] != '\0')
-	{
-		if (sep[i] == c)
-			return (1);
-		i++;
-	}
-	return (0);
+	while (arr[i])
+		free(arr[i++]);
+	free(arr);
+	return (NULL);
 }
 
-int	number_of_words(char *str, char *sep)
+static int	number_of_words(char const *s, char c)
 {
 	int	i;
-	int	counter;
+	int	count;
 
 	i = 0;
-	counter = 0;
-	while (str[i] != '\0')
+	count = 0;
+	while (s[i])
 	{
-		if (!separator(str[i], sep))
+		if (s[i] != c)
 		{
-			counter++;
-			while (str[i] != '\0' && !(separator(str[i], sep)))
+			count++;
+			while (s[i] && s[i] != c)
 				i++;
 		}
 		else
 			i++;
 	}
-	return (counter);
+	return (count);
 }
-
-char	*separating_words(char *str, char *sep)
+static char	*sep_words(char const *s, char c)
 {
-	char	*separated;
+	char	*sep;
 	int		i;
-	int		k;
+	int		j;
 
 	i = 0;
-	k = 0;
-	while (str[i] != '\0' && !(separator(str[i], sep)))
+	j = 0;
+	while (s[i] && s[i] != c)
 		i++;
-	separated = malloc(sizeof(char) * (i + 1));
-	if (separated == NULL)
+	sep = (char *)malloc(sizeof(char) * (i + 1));
+	if (sep == NULL)
 		return (NULL);
-	while (k < i)
+	while (i > j)
 	{
-		separated[k] = str[k];
-		k++;
+		sep[j] = s[j];
+		j++;
 	}
-	separated[k] = '\0';
-	return (separated);
+	sep[j] = '\0';
+	return (sep);
 }
-
-/*
 #include <stdio.h>
 
 int	main(void)
 {
-		char *strs[] = {"function", "that", "will", "concatenate"};
-		char sep[] = " ";
-	int		size;
-	char	*b;
+	char const *str = "ehal greka cherez reku";
+	char sep = ' ';
+	char **words = ft_split(str, sep);
 
-		size = 4;
-		b = ft_strjoin(size, strs, sep);
-		printf("%s", b);
-		free(b);
+	int i = 0;
+	while (words[i])
+	{
+		printf("%s\n", words[i]);
+		free(words[i]);
+		i++;
+	}
+	free(words);
 }
-
-
-
-*/

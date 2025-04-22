@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 14:54:14 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/22 16:25:27 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/22 18:33:50 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,24 @@ char	*ft_strchr(const char *s, int c)
 	else
 		return (NULL);
 }
+
+int	main(void)
+{
+	char	str[] = "function returns a pointer";
+	char	c;
+	char	*pt;
+	char	*ptr;
+
+	c = '+';
+	ptr = ft_strchr(str, c);
+	pt = strchr(str, c);
+	if (!pt)
+		printf("HEHE\n");
+	else
+		printf("%p\n", ptr);
+	printf("%p\n", pt);
+}
+
 /*
 int	main(void)
 {
@@ -36,10 +54,17 @@ int	main(void)
 	char	*ptr;
 	char	*pt;
 
-	c = '=';
+	c = '+';
 	ptr = ft_strchr(str, c);
 	pt = strchr(str, c);
-	printf("%s\n", ptr);
-	printf("%s\n", pt);
+	if (ptr)
+		printf("ft_strchr: %s\n", ptr);
+	else
+		printf("ft_strchr: NULL\n");
+	if (pt)
+		printf("strchr: %s\n", pt);
+	else
+		printf("strchr: NULL\n");
+	return (0);
 }
 */

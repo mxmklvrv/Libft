@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 16:27:04 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/22 16:27:12 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/22 16:40:04 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_strdup(const char *s)
 	res = (char *)malloc(sizeof(char) * (len + 1));
 	if (res == NULL)
 		return (NULL);
-	while(i < len)
+	while (i < len)
 	{
 		res[i] = s[i];
 		i++;
@@ -58,6 +58,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t n)
 	}
 	return (ft_strlen(src));
 }
+*/
 
 static int	to_trim(char c, char const *set)
 {
@@ -72,7 +73,7 @@ static int	to_trim(char c, char const *set)
 	}
 	return (0);
 }
-*/
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;
@@ -83,7 +84,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (s1 == NULL || set == NULL)
 		return (NULL);
 	if (s1[0] == '\0')
-		return (ft_strdup("")); // check here.
+		return (ft_strdup(""));
 	start = 0;
 	while (s1[start] && to_trim(s1[start], set))
 		start++;
@@ -109,10 +110,11 @@ int	main(void)
 	char *res5 = ft_strtrim("?????", "?");
 	char *res6 = ft_strtrim("", "");
 	char *res7 = ft_strtrim("", " ");
+	char *res8 = ft_strtrim("xxx---Hello World---xxx", "x-");
 
 	printf("%s\n", res1);
-	printf("%s\n%s\n%s\n%s\n%s\n%s\n%s\n", res1, res2, res3, res4, res5, res6,
-		res7);
+	printf("%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n", res1, res2, res3, res4, res5,
+		res6, res7, res8);
 	free(res1);
 	free(res2);
 	free(res3);
@@ -120,4 +122,5 @@ int	main(void)
 	free(res5);
 	free(res6);
 	free(res7);
+	free(res8);
 }
