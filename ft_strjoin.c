@@ -13,23 +13,18 @@ size_t	ft_strlen(const char *s)
 size_t	ft_strlcpy(char *dst, const char *src, size_t n)
 {
 	size_t	i;
-	size_t	j;
 
 	i = 0;
-	j = 0;
-	if (n <= 0)
-		return (ft_strlen(src));
-	while (src[i])
-	{
-		if (i < (n - 1))
-		{
-			dst[i] = src[i];
-			j++;
-		}
-		i++;
-	}
-	dst[j] = '\0';
-	return (i);
+	if (n > 0)
+    {
+        while (src[i] && i < (n - 1))
+	    {
+		    dst[i] = src[i];
+            i++;
+	    }
+	    dst[i] = '\0';
+    }
+	return (ft_strlen(src));
 }
 size_t	ft_strlcat(char *dst, const char *src, size_t d_size)
 {
