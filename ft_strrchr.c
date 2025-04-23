@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 15:44:00 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/22 18:17:35 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/23 22:05:06 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,22 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int		i;
 	int		len;
-	char	ch;
+	unsigned char	ch;
 
-	ch = (char)c;
-	i = 0;
-	while (s[i])
-		i++;
-	len = i - 1;
-	while (s[len] != ch && len != 0)
+	ch = (unsigned char)c;
+	len = 0;
+	while (s[len])
+		len++;
+	while (len >=0)
+	{
+		if ((unsigned char)s[len] == ch)
+			return ((char *)&s[len]);
 		len--;
-	if (s[len] == ch)
-		return ((char *)&s[len]);
-	else
-		return (NULL);
+	}
+	return (NULL);
 }
+
 
 int	main(void)
 {
