@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 14:54:14 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/22 18:33:50 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/23 21:52:38 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,33 +17,15 @@
 char	*ft_strchr(const char *s, int c)
 {
 	int		i;
-	char	ch;
+	unsigned char	ch;
 
-	ch = (char)c;
+	ch = (unsigned char)c;
 	i = 0;
-	while (s[i] != ch && s[i] != '\0')
+	while ((unsigned char)s[i] != ch && s[i] != '\0')
 		i++;
-	if (s[i] == ch)
+	if ((unsigned char)s[i] == ch)
 		return ((char *)&s[i]);
-	else
-		return (NULL);
-}
-
-int	main(void)
-{
-	char	str[] = "function returns a pointer";
-	char	c;
-	char	*pt;
-	char	*ptr;
-
-	c = '+';
-	ptr = ft_strchr(str, c);
-	pt = strchr(str, c);
-	if (!pt)
-		printf("HEHE\n");
-	else
-		printf("%p\n", ptr);
-	printf("%p\n", pt);
+	return (NULL);
 }
 
 /*
@@ -54,7 +36,7 @@ int	main(void)
 	char	*ptr;
 	char	*pt;
 
-	c = '+';
+	c = '\0';
 	ptr = ft_strchr(str, c);
 	pt = strchr(str, c);
 	if (ptr)
