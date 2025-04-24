@@ -6,13 +6,13 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 17:53:32 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/24 12:55:59 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/24 13:38:45 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	char	*ptr;
 	size_t	i;
