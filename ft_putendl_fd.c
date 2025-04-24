@@ -1,37 +1,49 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/24 12:44:10 by mklevero          #+#    #+#             */
+/*   Updated: 2025/04/24 12:44:15 by mklevero         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 /*
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
-    write(fd, &c, 1);
+	write(fd, &c, 1);
 }
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while(s[i])
-    {
-        ft_putchar_fd(s[i], fd);
-        i++;
-    }
-
+	i = 0;
+	while(s[i])
+	{
+		ft_putchar_fd(s[i], fd);
+		i++;
+	}
 }
 */
 
-void ft_putendl_fd(char *s, int fd)
-{   
-    if (s == NULL)
-        return ;
-    ft_putstr_fd(s, fd);
-    ft_putchar_fd('\n', fd);
+void	ft_putendl_fd(char *s, int fd)
+{
+	if (s == NULL)
+		return ;
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
 /*
 #include <unistd.h>
+
 int main (void)
 {
-    ft_putendl_fd("Korabli lavirovali, lavirovali, da ne vylavirovali", 1);
-    ft_putendl_fd("Vo dvore trava, na trave drova", 1);
-    return (0);
+	ft_putendl_fd("Korabli lavirovali, lavirovali, da ne vylavirovali", 1);
+	ft_putendl_fd("Vo dvore trava, na trave drova", 1);
+	return (0);
 }
-*/    
+*/

@@ -1,16 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/24 12:42:09 by mklevero          #+#    #+#             */
+/*   Updated: 2025/04/24 12:43:04 by mklevero         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 /*write char to specified file descriptor*/
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
-    write(fd, &c, 1);
+	write(fd, &c, 1);
 }
 /*
 #include <unistd.h>
+
 int main (void)
 {
-    ft_putchar_fd('M', 1);
-    return (0);
-
+	ft_putchar_fd('M', 1);
+	return (0);
 }
 */

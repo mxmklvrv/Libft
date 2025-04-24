@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 17:53:32 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/22 16:03:29 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/24 12:55:59 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 void	bzero(void *s, size_t n)
 {
-	char *ptr;
-	size_t i;
+	char	*ptr;
+	size_t	i;
 
 	ptr = (char *)s;
 	i = 0;
-
 	while (i < n)
 	{
 		ptr[i] = '\0';
 		i++;
 	}
 }
+/// prover' s = null

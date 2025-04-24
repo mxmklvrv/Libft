@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 15:44:00 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/23 22:05:06 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/24 12:58:24 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int		len;
+	int				len;
 	unsigned char	ch;
 
 	ch = (unsigned char)c;
 	len = 0;
 	while (s[len])
 		len++;
-	while (len >=0)
+	while (len >= 0)
 	{
 		if ((unsigned char)s[len] == ch)
 			return ((char *)&s[len]);
@@ -31,7 +31,6 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
 
 int	main(void)
 {

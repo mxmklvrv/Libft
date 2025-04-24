@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 16:03:05 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/22 16:03:13 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/24 12:39:33 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void *ptr;
-	size_t t_bytes;
+	void	*ptr;
+	size_t	t_bytes;
 
 	t_bytes = count * size;
-	if (size && (t_bytes/size) != count)
+	if (size && (t_bytes / size) != count)
 		return (NULL);
 	ptr = malloc(t_bytes);
 	if (ptr == NULL)

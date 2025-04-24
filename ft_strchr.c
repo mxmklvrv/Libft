@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 14:54:14 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/23 21:52:38 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/24 12:46:42 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int		i;
+	int				i;
 	unsigned char	ch;
 
 	ch = (unsigned char)c;
