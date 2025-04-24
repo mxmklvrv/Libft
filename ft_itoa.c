@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 16:04:49 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/24 12:39:57 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/24 15:33:49 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ char	*ft_itoa(int n)
 	str = transform_to_str(str, i, j);
 	return (str);
 }
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -75,3 +76,4 @@ int	main(void)
 	printf("%s\n", ft_itoa(999999999));
 	return (0);
 }
+*/
