@@ -21,7 +21,6 @@ ft_substr.c ft_tolower.c ft_toupper.c
 OBJ = $(SRCS:.c=.o)
 
 NAME = libft.a
-///////////////////////HEADER = libft.h
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
@@ -42,5 +41,3 @@ re:
 	fclean all
 
 .PHONY: all clean fclean re
-
-Test test 

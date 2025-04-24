@@ -6,13 +6,14 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 17:27:29 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/24 12:40:11 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/24 14:00:20 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
+
+//#include <stdio.h>
+//#include <string.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -31,13 +32,16 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+/*
 int	main(void)
 {
-	char str[] = "123456789";
-	char str_1[] = "123456789656565655655";
+	char	str[] = "123456789";
+	char	str_1[] = "123456789656565655655";
+	int		res;
+	int		res_1;
 
-	int res = ft_memcmp(str, str_1, 10);
-	int res_1 = memcmp(str, str_1, 10);
-
+	res = ft_memcmp(str, str_1, 10);
+	res_1 = memcmp(str, str_1, 10);
 	printf("%d\n%d\n", res, res_1);
 }
+*/

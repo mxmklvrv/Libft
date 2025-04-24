@@ -6,10 +6,11 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 12:45:08 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/24 13:34:33 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/24 14:01:37 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 /*
 #include <unistd.h>
 

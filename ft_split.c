@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 16:42:16 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/24 12:46:39 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/24 14:02:02 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,15 +95,20 @@ static char	*sep_words(char const *s, char c)
 	sep[j] = '\0';
 	return (sep);
 }
+/*
 #include <stdio.h>
 
 int	main(void)
 {
-	char const *str = "ehal greka cherez reku";
-	char sep = ' ';
-	char **words = ft_split(str, sep);
+	char const	*str;
+	char		sep;
+	char		**words;
+	int			i;
 
-	int i = 0;
+	str = "ehal greka cherez reku";
+	sep = ' ';
+	words = ft_split(str, sep);
+	i = 0;
 	while (words[i])
 	{
 		printf("%s\n", words[i]);
@@ -112,3 +117,4 @@ int	main(void)
 	}
 	free(words);
 }
+*/

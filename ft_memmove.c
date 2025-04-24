@@ -6,12 +6,13 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 14:25:21 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/24 12:40:15 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/24 14:00:58 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+
+//#include <stdio.h>
 
 /*copies n bytes from src to dest, may overlap*/
 void	*ft_memmove(void *dest, const void *src, size_t n)
@@ -41,7 +42,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
+/*
 int	main(void)
 {
 	char	src[30] = "abcdefghij";
@@ -54,3 +55,4 @@ int	main(void)
 	ft_memmove(src_2, src_2 + 3, 5);
 	printf("%s\n%s\n%s\n", dest, src_1, src_2);
 }
+*/

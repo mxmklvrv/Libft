@@ -6,13 +6,14 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 14:23:49 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/24 12:40:13 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/24 14:00:42 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
+
+//#include <stdio.h>
+//#include <string.h>
 
 /*copies n bytes from src to dest, may not overlap*/
 void	*ft_memcpy(void *dest, const void *src, size_t n)
@@ -31,7 +32,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
+/*
 int	main(void)
 {
 	int	src[5] = {9, 8, 7, 6, 5};
@@ -49,3 +50,4 @@ int	main(void)
 		printf("%d ", dest_1[i]);
 	printf("\n");
 }
+*/

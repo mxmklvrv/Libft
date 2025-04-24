@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 16:07:49 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/24 13:35:41 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/24 14:02:41 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,16 +77,22 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(joined, s2, len_total + 1);
 	return (joined);
 }
+/*
 #include <stdio.h>
 
 int	main(void)
 {
-	char *s1 = ft_strjoin("hello", " world");
-	char *s2 = ft_strjoin("hello", " 12345");
-	char *s3 = ft_strjoin("", " world");
-	char *s4 = ft_strjoin("hello", "");
-	char *s5 = ft_strjoin("", "");
+	char	*s1;
+	char	*s2;
+	char	*s3;
+	char	*s4;
+	char	*s5;
 
+	s1 = ft_strjoin("hello", " world");
+	s2 = ft_strjoin("hello", " 12345");
+	s3 = ft_strjoin("", " world");
+	s4 = ft_strjoin("hello", "");
+	s5 = ft_strjoin("", "");
 	printf("%s\n%s\n%s\n%s\n%s\n", s1, s2, s3, s4, s5);
 	free(s1);
 	free(s2);
@@ -94,3 +100,4 @@ int	main(void)
 	free(s4);
 	free(s5);
 }
+*/

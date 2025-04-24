@@ -6,13 +6,14 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 14:54:14 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/24 12:46:42 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/24 14:04:29 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
+
+//#include <stdio.h>
+//#include <string.h>
 
 char	*ft_strchr(const char *s, int c)
 {

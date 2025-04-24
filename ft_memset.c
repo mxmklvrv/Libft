@@ -6,13 +6,14 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 16:19:59 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/24 13:33:57 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/24 14:01:09 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
+
+//#include <stdio.h>
+//#include <string.h>
 
 void	*ft_memset(void *s, int c, size_t n)
 {

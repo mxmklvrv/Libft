@@ -6,13 +6,14 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 15:44:00 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/24 13:37:16 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/24 14:03:45 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
+
+//#include <stdio.h>
+//#include <string.h>
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -31,7 +32,7 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
+/*
 int	main(void)
 {
 	char	str[] = "function returns a pointer";
@@ -45,3 +46,4 @@ int	main(void)
 	printf("%s\n", ptr);
 	printf("%s\n", pt);
 }
+*/
