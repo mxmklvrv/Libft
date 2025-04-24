@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 16:09:37 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/24 12:58:22 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/24 13:26:16 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,24 @@
 /*The strnstr() function locates the first occurrence of the null-terminated string needle in the string haystack,
  where not more than len characters are searched. Characters that appear after a '\0' character are not searched.*/
 
-char	*strnstr(const char *haystack, const char *needle, size_t n)
+char	*ft_strnstr(const char *big, const char *little, size_t n)
 {
 	size_t	i;
 	size_t	j;
 
 	i = 0;
-	if (!needle[0])
-		return ((char *)haystack);
-	if (!haystack && !n)
+	if (!little[0])
+		return ((char *)big);
+	if (!big && !n)
 		return (NULL);
-	while (haystack[i] && i < n)
+	while (big[i] && i < n)
 	{
 		j = 0;
-		while (haystack[i + j] && needle[j] && haystack[i + j] == needle[j]
-			&& ((i + j) < n))
+		while (big[i + j] && little[j] && big[i + j] == little[j] && ((i
+					+ j) < n))
 			j++;
-		if (!needle[j])
-			return ((char *)(haystack + i));
+		if (!little[j])
+			return ((char *)(big + i));
 		i++;
 	}
 	return (NULL);
