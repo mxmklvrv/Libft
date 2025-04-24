@@ -25,7 +25,7 @@ $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $(<:.c=o)
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJ)
@@ -33,7 +33,7 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 re:
-	fclean $(NAME)
+	fclean all
 
 .PHONY: all clean fclean re
 
