@@ -17,7 +17,11 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void *ptr;
-	/* TODO - OVERFLOW CHECK*/
+	size_t t_bytes;
+
+	t_bytes = count * size;
+	if (size && (t_bytes/size) != count)
+		return (NULL);
 	ptr = malloc(count * size);
 	if (ptr == NULL)
 		return (NULL);
