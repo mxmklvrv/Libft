@@ -22,9 +22,9 @@ void	*ft_calloc(size_t count, size_t size)
 	t_bytes = count * size;
 	if (size && (t_bytes/size) != count)
 		return (NULL);
-	ptr = malloc(count * size);
+	ptr = malloc(t_bytes);
 	if (ptr == NULL)
 		return (NULL);
-	ft_memset(ptr, 0, (count * size));
+	ft_memset(ptr, 0, (t_bytes));
 	return (ptr);
 }
