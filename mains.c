@@ -17,6 +17,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
+/**/
 
 
 int	main(void)
@@ -169,7 +170,7 @@ int	main(void)
     }
 	
 	printf("-----------------------------ft_isprint test--------------------------------------\n");
-	
+	*/
     char test1_isprint[] = {32, 33, 48, 65, 97, 126};
     printf("Test Case 1: Printable characters:\n");
     for (int i = 0; i < 6; i++) {
@@ -180,13 +181,6 @@ int	main(void)
     for (int i = 0; i < 6; i++) {
         printf("ft_isprint('%c') = %d, isprint('%c') = %d\n", test2_isprint[i], ft_isprint(test2_isprint[i]), test2_isprint[i], isprint(test2_isprint[i]));
     }
-	*/
-	printf("-----------------------------ft_itoa test--------------------------------------\n");
-	
-    printf("\"69699\" => ft_itoa: %s | itoa: %s\n", ft_itoa(69699), itoa(69699));
-    printf("\"-999\" => ft_itoa: %s | itoa: %s\n", ft_itoa(-999), itoa(-999));
-    printf("\"0\" => ft_itoa: %s | itoa: %s\n", ft_itoa(0), itoa(0));
-    printf("\"-2147483648\" => ft_itoa: %s | itoa: %s\n", ft_itoa(-2147483648), itoa(-2147483648));
-    printf("\"999999999\" => ft_itoa: %s | itoa: %s\n", ft_itoa(999999999), itoa(999999999));
-
 }
+	//printf("-----------------------------ft_itoa test--------------------------------------\n");
+

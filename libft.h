@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 18:32:50 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/24 13:44:28 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/25 15:25:07 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+
+
+// AXELS _DELETE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+# include <stddef.h>
+# include <limits.h>
+# include <stdint.h>
 
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);

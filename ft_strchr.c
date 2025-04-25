@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 14:54:14 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/24 14:04:29 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/25 15:21:16 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-/*
+/*x
 int	main(void)
 {
 	char	str[] = "function returns a pointer";

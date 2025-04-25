@@ -40,4 +40,10 @@ fclean: clean
 re:
 	fclean all
 
+test: axel.c $(NAME)
+	cc $(CFLAGS) -lbsd $^ -o jopa
+	./jopa 
+	rm jopa
+	rm $(OBJ) 
+
 .PHONY: all clean fclean re

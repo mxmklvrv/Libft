@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 16:58:08 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/24 17:46:36 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/25 15:27:35 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,14 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 
-int	main(void)
-{
-	char	str[] = "To begin,you must 1 reimplement a set of functions libc.";
-	char	*ptr;
-	char	*ptr_1;
+// int	main(void)
+// {
+// 	char	str[] = "To begin,you must 1 reimplement a set of functions libc.";
+// 	char	*ptr;
+// 	char	*ptr_1;
 
-	ptr = ft_memchr(str, 't', strlen(str));
-	ptr_1 = memchr(str, 't', strlen(str));
-	printf("%s\n%s\n", ptr, ptr_1);
-}
+// 	ptr = ft_memchr(str, 't', strlen(str));
+// 	ptr_1 = memchr(str, 't', strlen(str));
+// 	printf("%s\n%s\n", ptr, ptr_1);
+// }
 
