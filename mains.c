@@ -180,13 +180,54 @@ int	main(void)
     for (int i = 0; i < 6; i++) {
         printf("ft_isprint('%c') = %d, isprint('%c') = %d\n", test2_isprint[i], ft_isprint(test2_isprint[i]), test2_isprint[i], isprint(test2_isprint[i]));
     }
-	*/
+	
 	printf("-----------------------------ft_itoa test--------------------------------------\n");
 	
-    printf("\"69699\" => ft_itoa: %s | itoa: %s\n", ft_itoa(69699), itoa(69699));
-    printf("\"-999\" => ft_itoa: %s | itoa: %s\n", ft_itoa(-999), itoa(-999));
-    printf("\"0\" => ft_itoa: %s | itoa: %s\n", ft_itoa(0), itoa(0));
-    printf("\"-2147483648\" => ft_itoa: %s | itoa: %s\n", ft_itoa(-2147483648), itoa(-2147483648));
-    printf("\"999999999\" => ft_itoa: %s | itoa: %s\n", ft_itoa(999999999), itoa(999999999));
+    int numb_itoa[] = {0, 123, -456, 2147483647, -2147483648};
+	int len = sizeof(numb_itoa) / sizeof(numb_itoa[0]);
 
+	for (int i = 0; i < len; i++)
+	{
+		char *res_itoa = ft_itoa(numb_itoa[i]);
+		if (res_itoa)
+		{
+			printf("ft_itoa(%d) = %s\n", numb_itoa[i], res_itoa);
+			free(res_itoa);
+		}
+		else
+		{
+			printf("Failed for %d\n", numb_itoa[i]);
+		}
+	}
+    
+    printf("-----------------------------ft_memchr test--------------------------------------\n");
+
+    char	str_memchr[] = "To begin,you must 1 reimplement a set of functions libc.";
+	char	*ptr_memchr = ft_memchr(str_memchr, 't', strlen(str_memchr));
+	char	*ptr_1_memchr = memchr(str_memchr, 't', strlen(str_memchr));
+	printf("ft_memchr = %s\n", ptr_memchr);
+    printf("memchr = %s\n", ptr_memchr);
+
+    printf("-----------------------------ft_memcmp test--------------------------------------\n");
+    
+    char	str_memcmp[] = "123456789";
+	char	str_1_memcmp[] = "123456789656565655655";
+	int		res_memcmp = ft_memcmp(str_memcmp, str_1_memcmp, 10);
+	int		res_1_memcmp = memcmp(str_memcmp, str_1_memcmp, 10);
+
+	printf("ft_memcmp = %d\n", res_memcmp);
+    printf("memcmp = %d\n", res_1_memcmp);
+
+    printf("-----------------------------ft_memcpy test--------------------------------------\n");
+
+    char src4[] = "Test test test ";
+    char dest4_memcpy[30];
+    char dest_memcpy[30];
+    ft_memcpy(dest4_memcpy, src4, strlen(src4) + 1);
+    memcpy(dest_memcpy, src4, strlen(src4) + 1);
+    printf("ft_memcpy =  %s\n", dest4_memcpy);
+    printf(" memcpy =    %s\n", dest_memcpy);
+*/
+    printf("-----------------------------ft_memmove test--------------------------------------\n");
+    
 }
