@@ -1,38 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/16 16:11:09 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/25 21:04:41 by mklevero         ###   ########.fr       */
+/*   Created: 2025/04/25 18:51:51 by mklevero          #+#    #+#             */
+/*   Updated: 2025/04/25 20:57:46 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+t_list	*ft_lstnew(void *content)
 {
-	int	i;
-	int	num;
-	int	neg;
+	t_list	*node;
 
-	i = 0;
-	num = 0;
-	neg = 1;
-	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
-		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
-	{
-		if (nptr[i] == '-')
-			neg *= -1;
-		i++;
-	}
-	while (nptr[i] >= '0' && nptr[i] <= '9')
-	{
-		num = num * 10 + (nptr[i] - '0');
-		i++;
-	}
-	return (num * neg);
+	node = (t_list *)malloc(sizeof(t_list));
+	if (node == NULL)
+		return (NULL);
+	node->content = content;
+	node->next = NULL;
+	return (node);
 }

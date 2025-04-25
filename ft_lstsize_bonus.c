@@ -1,38 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/16 16:11:09 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/25 21:04:41 by mklevero         ###   ########.fr       */
+/*   Created: 2025/04/25 20:10:13 by mklevero          #+#    #+#             */
+/*   Updated: 2025/04/25 20:55:41 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+int	ft_lstsize(t_list *lst)
 {
 	int	i;
-	int	num;
-	int	neg;
 
 	i = 0;
-	num = 0;
-	neg = 1;
-	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
-		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
+	while (lst != NULL)
 	{
-		if (nptr[i] == '-')
-			neg *= -1;
+		lst = lst->next;
 		i++;
 	}
-	while (nptr[i] >= '0' && nptr[i] <= '9')
-	{
-		num = num * 10 + (nptr[i] - '0');
-		i++;
-	}
-	return (num * neg);
+	return (i);
 }

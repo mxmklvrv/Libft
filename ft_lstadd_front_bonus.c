@@ -1,38 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/16 16:11:09 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/25 21:04:41 by mklevero         ###   ########.fr       */
+/*   Created: 2025/04/25 19:21:11 by mklevero          #+#    #+#             */
+/*   Updated: 2025/04/25 21:25:39 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	int	i;
-	int	num;
-	int	neg;
-
-	i = 0;
-	num = 0;
-	neg = 1;
-	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
-		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
+	if (lst && new)
 	{
-		if (nptr[i] == '-')
-			neg *= -1;
-		i++;
+		new->next = *lst;
+		*lst = new;
 	}
-	while (nptr[i] >= '0' && nptr[i] <= '9')
-	{
-		num = num * 10 + (nptr[i] - '0');
-		i++;
-	}
-	return (num * neg);
 }

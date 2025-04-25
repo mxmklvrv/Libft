@@ -188,6 +188,5 @@ int	main(void)
     printf("\"0\" => ft_itoa: %s | itoa: %s\n", ft_itoa(0), itoa(0));
     printf("\"-2147483648\" => ft_itoa: %s | itoa: %s\n", ft_itoa(-2147483648), itoa(-2147483648));
     printf("\"999999999\" => ft_itoa: %s | itoa: %s\n", ft_itoa(999999999), itoa(999999999));
-    
+*/    
 }
-*/

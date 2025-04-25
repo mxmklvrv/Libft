@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/16 16:11:09 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/25 21:04:41 by mklevero         ###   ########.fr       */
+/*   Created: 2025/04/25 21:03:03 by mklevero          #+#    #+#             */
+/*   Updated: 2025/04/25 21:38:28 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	int	i;
-	int	num;
-	int	neg;
+	t_list *last;
 
-	i = 0;
-	num = 0;
-	neg = 1;
-	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
-		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
+	if (lst == NULL || new == NULL)
+		return ;
+	if (*lst == NULL)
 	{
-		if (nptr[i] == '-')
-			neg *= -1;
-		i++;
+		*lst = new;
+		return ;
 	}
-	while (nptr[i] >= '0' && nptr[i] <= '9')
-	{
-		num = num * 10 + (nptr[i] - '0');
-		i++;
-	}
-	return (num * neg);
+	last = ft_lstlast_bonus(*lst);
+	last->next = new;	
 }
