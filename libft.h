@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 18:32:50 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/25 15:25:07 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/25 18:47:44 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,13 @@
 # include <unistd.h>
 
 
-// AXELS _DELETE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
-# include <stddef.h>
-# include <limits.h>
-# include <stdint.h>
+typedef struct s_list
+{
+	void *content;
+	struct s_list *next;
+	} t_list;
+
+
 
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
