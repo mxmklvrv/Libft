@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 21:03:03 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/26 15:35:37 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/26 19:02:39 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *last;
+	t_list	*last;
 
 	if (lst == NULL || new == NULL)
 		return ;
@@ -24,5 +24,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		return ;
 	}
 	last = ft_lstlast(*lst);
-	last->next = new;	
+	last->next = new;
 }

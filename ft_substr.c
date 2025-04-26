@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 16:24:18 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/24 15:37:46 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/26 19:11:34 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	s_len = ft_strlen(s);
 	if (s_len <= start)
-		return (ft_strdup("")); // not sure
+		return (ft_strdup(""));
 	if (len > s_len - start)
 		len = s_len - start;
 	str = (char *)malloc(sizeof(char) * (len + 1));
@@ -37,6 +37,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[i] = '\0';
 	return (str);
 }
+
 /*
 #include <stdio.h>
 

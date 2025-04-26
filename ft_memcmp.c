@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 17:27:29 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/25 18:47:20 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/26 18:59:21 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char	     *copy_s1;
+	unsigned char	*copy_s1;
 	unsigned char	*copy_s2;
 	size_t			i;
 

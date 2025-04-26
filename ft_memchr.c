@@ -6,30 +6,31 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 16:58:08 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/25 15:27:35 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/26 18:46:41 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 #include <stdio.h>
 #include <string.h>
-// proverit' 
+
+// proverit'
 /*function  scans  the  initial n bytes of the memory area
-		pointed to by s for the first instance of c.*/
+		pointed to by s for the first instance of c.
+	casted to unsigned chars to prevent negative values*/
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*ps;
-	unsigned char	ch;
-	size_t			i;
+	unsigned const char	*ps;
+	unsigned char		ch;
+	size_t				i;
 
-	ps = (unsigned char *)s;
+	ps = (unsigned const char *)s;
 	ch = (unsigned char)c;
 	i = 0;
 	while (i < n)
 	{
 		if (ps[i] == ch)
-			return (&ps[i]);
+			return ((void *)&ps[i]);
 		i++;
 	}
 	return (NULL);
@@ -45,4 +46,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 // 	ptr_1 = memchr(str, 't', strlen(str));
 // 	printf("%s\n%s\n", ptr, ptr_1);
 // }
-

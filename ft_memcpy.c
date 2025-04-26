@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 14:23:49 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/24 14:00:42 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/26 17:56:13 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,16 @@
 //#include <stdio.h>
 //#include <string.h>
 
-/*copies n bytes from src to dest, may not overlap*/
+/*copies n bytes from src to dest, may not overlap 
+(share part of the same physical memory.)*/
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char	*copy_dest;
-	unsigned char	*copy_src;
-	size_t			i;
+	unsigned char		*copy_dest;
+	unsigned const char	*copy_src;
+	size_t				i;
 
 	copy_dest = (unsigned char *)dest;
-	copy_src = (unsigned char *)src;
+	copy_src = (unsigned const char *)src;
 	i = 0;
 	while (i < n)
 	{

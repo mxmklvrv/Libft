@@ -6,11 +6,12 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 16:42:16 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/24 14:02:02 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/26 19:06:53 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 static int	number_of_words(char const *s, char c);
 static char	*sep_words(char const *s, char c);
 static void	*free_sp(char **arr);
@@ -74,6 +75,7 @@ static int	number_of_words(char const *s, char c)
 	}
 	return (count);
 }
+
 static char	*sep_words(char const *s, char c)
 {
 	char	*sep;
