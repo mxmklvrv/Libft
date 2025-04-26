@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 21:03:03 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/25 21:38:28 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/26 15:35:37 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 		return ;
 	}
-	last = ft_lstlast_bonus(*lst);
+	last = ft_lstlast(*lst);
 	last->next = new;	
 }
