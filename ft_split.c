@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 16:42:16 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/26 19:06:53 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/28 11:01:48 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ static void	*free_sp(char **arr)
 	int	i;
 
 	i = 0;
+	if (arr == NULL)
+		return (NULL);
 	while (arr[i])
 		free(arr[i++]);
 	free(arr);
