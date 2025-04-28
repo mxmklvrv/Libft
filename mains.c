@@ -4,19 +4,14 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-void	*ft_memset(void *s, int c, size_t n)
+void	upper(unsigned int i, char *c)
 {
-	unsigned char	*ptr;
-
-	ptr = (unsigned char *)s;
-	while (n > 0)
-	{
-		*ptr = c;
-		ptr++;
-		n--;
-	}
-	return (s);
+	(void)i;
+	if (*c >= 97 && *c <= 122)
+		*c = *c - 32;
 }
+
+
 
 
 int	main(void)
@@ -193,7 +188,7 @@ int	main(void)
  	char	*ptr_1_memchr = memchr(str_memchr, 't', strlen(str_memchr));
  	
  	printf("%s\n%s\n", ptr_memchr, ptr_1_memchr);
-*/
+
     printf("-----------------------------ft_memcmp test--------------------------------------\n");
 
    
@@ -203,7 +198,7 @@ int	main(void)
  	int		res_memcmp = ft_memcmp(str_memcmp, str_1_memcmp, 1);
  	int		res_1_memcmp = memcmp(str_memcmp, str_1_memcmp, 1);;
  	printf("%d\n%d\n", res_memcmp, res_1_memcmp);
-/*
+
     printf("-----------------------------ft_memcpy test--------------------------------------\n");
 
     char str_memcpy[] = "Hello, world!";
@@ -223,13 +218,17 @@ int	main(void)
 	printf("After memcpy (overlap): %s\n", str_1_memcpy);
 
     printf("-----------------------------ft_memmove test--------------------------------------\n");
-    char src2[] = "Hello, world!";
+    char src2_memmove[] = "Hello, world!";
+    char src3_memmove[] = "Hello, world!";
     printf("Before overlapping memmove:\n");
-    printf("src2: \"%s\"\n", src2);
+    printf("src2: \"%s\"\n", src2_memmove);
+    printf("src3: \"%s\"\n", src3_memmove);
 
-    ft_memmove(src2 + 2, src2, 5);
+    ft_memmove(src2_memmove + 2, src2_memmove, 5);
+    memmove(src3_memmove + 2, src3_memmove, 5);
     printf("After overlapping ft_memmove:\n");
-    printf("src2: \"%s\"\n", src2);
+    printf("src2: \"%s\"\n", src2_memmove);
+    printf("src3: \"%s\"\n", src3_memmove);
 
     printf("-----------------------------ft_memset test--------------------------------------\n");
     char str_memset[50] = "ehal greka  cherez reku";
@@ -282,6 +281,44 @@ int	main(void)
 	printf("Original: %s\n", str_dup);
 	printf("Dup: %s\n",res_dup);
 	free(res_dup);
+    
+    printf("-----------------------------ft_striteri test--------------------------------------\n");
+    char	str_striteri[] = "shla sasha po shosse i sosala sushku";
+	printf("Before: %s\n", str_striteri);
+	ft_striteri(str_striteri, upper);
+	printf("After: %s\n", str_striteri);
+	return (0);
+
+
+    printf("-----------------------------ft_strjoin test--------------------------------------\n");
+	char	*s1_join;
+	char	*s2_join;
+	char	*s3_join;
+	char	*s4_join;
+	char	*s5_join;
+
+	s1_join = ft_strjoin("hello", " world");
+	s2_join = ft_strjoin("hello", " 12345");
+	s3_join = ft_strjoin("", " world");
+	s4_join = ft_strjoin("hello", "");
+	s5_join = ft_strjoin("", "");
+	printf("%s\n%s\n%s\n%s\n%s\n", s1_join, s2_join, s3_join, s4_join, s5_join);
+	free(s1_join);
+	free(s2_join);
+	free(s3_join);
+	free(s4_join);
+	free(s5_join);
 */
+    printf("-----------------------------ft_strjoin test--------------------------------------\n");
+    char	dst[67] = "odin";
+	char	*src;
+	size_t	res;
+
+	src = "dva";
+	res = ft_strlcat(dst, src, sizeof(dst));
+	printf("%s\n", dst);
+	printf("%zu", res);
+    
 }
+
 

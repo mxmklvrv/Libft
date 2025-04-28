@@ -6,58 +6,12 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 16:07:49 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/24 14:02:41 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/28 21:08:10 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
-
-size_t	ft_strlcpy(char *dst, const char *src, size_t n)
-{
-	size_t	i;
-
-	i = 0;
-	if (n > 0)
-	{
-		while (src[i] && i < (n - 1))
-		{
-			dst[i] = src[i];
-			i++;
-		}
-		dst[i] = '\0';
-	}
-	return (ft_strlen(src));
-}
-size_t	ft_strlcat(char *dst, const char *src, size_t d_size)
-{
-	size_t	i;
-	size_t	j;
-
-	i = 0;
-	j = 0;
-	while (dst[i] && i < d_size)
-		i++;
-	if (i >= d_size)
-		return (d_size + ft_strlen(src));
-	while (src[j] && ((i + j + 1) < d_size))
-	{
-		dst[i + j] = src[j];
-		j++;
-	}
-	dst[i + j] = '\0';
-	return (i + ft_strlen(src));
-}
-*/
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	len_1;
@@ -77,27 +31,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(joined, s2, len_total + 1);
 	return (joined);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char	*s1;
-	char	*s2;
-	char	*s3;
-	char	*s4;
-	char	*s5;
-
-	s1 = ft_strjoin("hello", " world");
-	s2 = ft_strjoin("hello", " 12345");
-	s3 = ft_strjoin("", " world");
-	s4 = ft_strjoin("hello", "");
-	s5 = ft_strjoin("", "");
-	printf("%s\n%s\n%s\n%s\n%s\n", s1, s2, s3, s4, s5);
-	free(s1);
-	free(s2);
-	free(s3);
-	free(s4);
-	free(s5);
-}
-*/

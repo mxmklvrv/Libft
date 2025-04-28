@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 16:08:52 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/24 14:02:56 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/28 21:08:03 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,17 +31,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[i + j] = '\0';
 	return (i + ft_strlen(src));
 }
-/*
-int	main(void)
-{
-	char	dst[67] = "odin";
-	char	*src;
-	size_t	res;
-
-	src = "dva";
-	res = ft_strlcat(dst, src, sizeof(dst));
-	printf("%s\n", dst);
-	printf("%zu", res);
-}
-
-*/

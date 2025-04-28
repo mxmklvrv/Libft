@@ -6,56 +6,11 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 16:42:16 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/28 11:01:48 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/28 20:53:20 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	number_of_words(char const *s, char c);
-static char	*sep_words(char const *s, char c);
-static void	*free_sp(char **arr);
-
-char	**ft_split(char const *s, char c)
-{
-	char	**arr;
-	int		j;
-
-	j = 0;
-	if (s == NULL)
-		return (NULL);
-	arr = malloc(sizeof(char *) * (number_of_words(s, c) + 1));
-	if (arr == NULL)
-		return (NULL);
-	while (*s)
-	{
-		if (*s != c)
-		{
-			arr[j] = sep_words(s, c);
-			if (!arr[j++])
-				return (free_sp(arr));
-			while (*s && *s != c)
-				s++;
-		}
-		else
-			s++;
-	}
-	arr[j] = NULL;
-	return (arr);
-}
-
-static void	*free_sp(char **arr)
-{
-	int	i;
-
-	i = 0;
-	if (arr == NULL)
-		return (NULL);
-	while (arr[i])
-		free(arr[i++]);
-	free(arr);
-	return (NULL);
-}
 
 static int	number_of_words(char const *s, char c)
 {
@@ -99,26 +54,44 @@ static char	*sep_words(char const *s, char c)
 	sep[j] = '\0';
 	return (sep);
 }
-/*
-#include <stdio.h>
 
-int	main(void)
+static void	*free_sp(char **arr)
 {
-	char const	*str;
-	char		sep;
-	char		**words;
-	int			i;
+	int	i;
 
-	str = "ehal greka cherez reku";
-	sep = ' ';
-	words = ft_split(str, sep);
 	i = 0;
-	while (words[i])
-	{
-		printf("%s\n", words[i]);
-		free(words[i]);
-		i++;
-	}
-	free(words);
+	if (arr == NULL)
+		return (NULL);
+	while (arr[i])
+		free(arr[i++]);
+	free(arr);
+	return (NULL);
 }
-*/
+
+char	**ft_split(char const *s, char c)
+{
+	char	**arr;
+	int		j;
+
+	j = 0;
+	if (s == NULL)
+		return (NULL);
+	arr = malloc(sizeof(char *) * (number_of_words(s, c) + 1));
+	if (arr == NULL)
+		return (NULL);
+	while (*s)
+	{
+		if (*s != c)
+		{
+			arr[j] = sep_words(s, c);
+			if (!arr[j++])
+				return (free_sp(arr));
+			while (*s && *s != c)
+				s++;
+		}
+		else
+			s++;
+	}
+	arr[j] = NULL;
+	return (arr);
+}
