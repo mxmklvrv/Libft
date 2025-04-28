@@ -17,13 +17,11 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-/*
+
 
 int	main(void)
 {
-	
-
-	
+    /*
 	printf("-----------------------------ft_atoi test--------------------------------------\n");
 	printf("\"12345\" => ft_atoi: %d | atoi: %d\n", ft_atoi("12345"),
 		atoi("12345"));
@@ -45,22 +43,27 @@ int	main(void)
 		atoi("12345abc"));
 	printf("\"-2147483648\" => ft_atoi: %d | atoi: %d\n",
 		ft_atoi("-2147483648"), atoi("-2147483648"));
-	printf("\"2147483647\" => ft_atoi: %d | atoi: %d\n", ft_atoi("2147483647"),
-		atoi("2147483647"));
-	
+	printf("\"9223372036854775808\" => ft_atoi: %d | atoi: %d\n", ft_atoi("9223372036854775808"),
+		atoi("9223372036854775808"));
+	*/
 	printf("-----------------------------ft_bzero test--------------------------------------\n");
 	char	a_ft_bzero[10] = "abcdefghi", b_bzero[10] = "abcdefghi";
-	ft_bzero(a_ft_bzero, 5);
-	bzero(b_bzero, 5);
+    printf("%lu\n", strlen(a_ft_bzero));
+    printf("%lu\n", strlen(b_bzero));
+	ft_bzero(a_ft_bzero, 3);
+	bzero(b_bzero, 3);
 	printf("ft_bzero: ");
 	for (int i = 0; i < 10; i++)
-		printf(a_ft_bzero[i] ? "%c" : "\\0", a_ft_bzero[i]);
+		printf("%c", a_ft_bzero[i]);
 	printf("\n");
 	printf("bzero:    ");
 	for (int i = 0; i < 10; i++)
-		printf(b_bzero[i] ? "%c" : "\\0", b_bzero[i]);
+		printf("%c", b_bzero[i]);
+    printf("\n");
+    printf("%lu\n", strlen(a_ft_bzero));
+    printf("%lu", strlen(a_ft_bzero));
 	printf("\n");
-	
+	/*
 	printf("-----------------------------ft_calloc test--------------------------------------\n");
 	int *arr_ft_calloc = ft_calloc(5, sizeof(int));
     if (arr_ft_calloc)
@@ -281,6 +284,6 @@ int	main(void)
 	printf("Original: %s\n", str_dup);
 	printf("Dup: %s\n",res_dup);
 	free(res_dup);
-
-}
 */
+}
+
