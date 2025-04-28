@@ -45,7 +45,7 @@ int	main(void)
 		ft_atoi("-2147483648"), atoi("-2147483648"));
 	printf("\"9223372036854775808\" => ft_atoi: %d | atoi: %d\n", ft_atoi("9223372036854775808"),
 		atoi("9223372036854775808"));
-	*/
+	
 	printf("-----------------------------ft_bzero test--------------------------------------\n");
 	char	a_ft_bzero[10] = "abcdefghi", b_bzero[10] = "abcdefghi";
     printf("%lu\n", strlen(a_ft_bzero));
@@ -60,15 +60,12 @@ int	main(void)
 	for (int i = 0; i < 10; i++)
 		printf("%c", b_bzero[i]);
     printf("\n");
-    printf("%lu\n", strlen(a_ft_bzero));
-    printf("%lu", strlen(a_ft_bzero));
-	printf("\n");
-	/*
+	*/
 	printf("-----------------------------ft_calloc test--------------------------------------\n");
 	int *arr_ft_calloc = ft_calloc(5, sizeof(int));
     if (arr_ft_calloc)
     {
-        printf("Test Case ft_calloc: Array of 5 ints (should be zeroed): ");
+        printf("Test ft_calloc: Array of 5 ints: ");
         for (int i = 0; i < 5; i++)
             printf("%d ", arr_ft_calloc[i]);
         printf("\n");
@@ -76,13 +73,13 @@ int	main(void)
     }
     else
     {
-        printf("Test Case ft_calloc: Memory allocation failed\n");
+        printf("ft_calloc: Memory allocation failed\n");
     }
 
 	int *arr_calloc = calloc(5, sizeof(int));
     if (arr_calloc)
     {
-        printf("Test Case calloc: Array of 5 ints (should be zeroed): ");
+        printf("calloc: Array of 5 ints: ");
         for (int i = 0; i < 5; i++)
             printf("%d ", arr_calloc[i]);
         printf("\n");
@@ -90,9 +87,9 @@ int	main(void)
     }
     else
     {
-        printf("Test Case calloc: Memory allocation failed\n");
+        printf("calloc: Memory allocation failed\n");
     }
-	
+	/*
 	printf("-----------------------------ft_isalnum test--------------------------------------\n");
 
 	char test1_isalnum[] = {'a', 'z', 'A', 'Z', 'm', 'M'};

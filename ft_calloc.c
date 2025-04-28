@@ -6,16 +6,15 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 16:03:05 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/26 17:32:43 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/28 19:08:43 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*allocates memory, nmemb - numbr of elements to allocate, size
-	- size of each element 
-	allocates memory for an array and initializes it to zero*/
-
-// check the overflosituation
 #include "libft.h"
+
+// allocates memory for an array of nmemb elements of size bytes
+// returns a pointer to the allocated memory.  The memory is set to zero.
+// checks for overflow.
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
@@ -23,7 +22,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t	t_bytes;
 
 	t_bytes = nmemb * size;
-	if (size && (t_bytes / size) != nmemb)
+	if (size == 0 && (t_bytes / size != nmemb))
 		return (NULL);
 	ptr = malloc(t_bytes);
 	if (ptr == NULL)
