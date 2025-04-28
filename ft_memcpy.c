@@ -6,7 +6,7 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 14:23:49 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/26 17:56:13 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/26 19:14:47 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 (share part of the same physical memory.)*/
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char		*copy_dest;
+	unsigned char		   *copy_dest;
 	unsigned const char	*copy_src;
 	size_t				i;
 
