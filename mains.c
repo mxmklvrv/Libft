@@ -60,7 +60,7 @@ int	main(void)
 	for (int i = 0; i < 10; i++)
 		printf("%c", b_bzero[i]);
     printf("\n");
-	*/
+	
 	printf("-----------------------------ft_calloc test--------------------------------------\n");
 	int *arr_ft_calloc = ft_calloc(5, sizeof(int));
     if (arr_ft_calloc)
@@ -89,7 +89,7 @@ int	main(void)
     {
         printf("calloc: Memory allocation failed\n");
     }
-	/*
+	
 	printf("-----------------------------ft_isalnum test--------------------------------------\n");
 
 	char test1_isalnum[] = {'a', 'z', 'A', 'Z', 'm', 'M'};
@@ -180,10 +180,11 @@ int	main(void)
     for (int i = 0; i < 6; i++) {
         printf("ft_isprint('%c') = %d, isprint('%c') = %d\n", test2_isprint[i], ft_isprint(test2_isprint[i]), test2_isprint[i], isprint(test2_isprint[i]));
     }
-	
+
 	printf("-----------------------------ft_itoa test--------------------------------------\n");
 	
-    printf("%s %s %s %s %s\n", ft_itoa(69699), ft_itoa(-999), ft_itoa(0), ft_itoa(-2147483648), ft_itoa(999999999));
+    printf("%s\n %s\n %s\n %s\n %s\n", ft_itoa(69699), ft_itoa(-999), ft_itoa(0), ft_itoa(-2147483648), ft_itoa(123));
+
 
     printf("-----------------------------ft_memchr test--------------------------------------\n");
 
@@ -192,17 +193,17 @@ int	main(void)
  	char	*ptr_1_memchr = memchr(str_memchr, 't', strlen(str_memchr));
  	
  	printf("%s\n%s\n", ptr_memchr, ptr_1_memchr);
-
+*/
     printf("-----------------------------ft_memcmp test--------------------------------------\n");
 
    
  
- 	char	str_memcmp[] = "abc";
- 	char	str_1_memcmp[] = "ABC";
- 	int		res_memcmp = ft_memcmp(str_memcmp, str_1_memcmp, 3);
- 	int		res_1_memcmp = memcmp(str_memcmp, str_1_memcmp, 3);;
+ 	char	str_memcmp[] = "";
+ 	char	str_1_memcmp[] = "";
+ 	int		res_memcmp = ft_memcmp(str_memcmp, str_1_memcmp, 1);
+ 	int		res_1_memcmp = memcmp(str_memcmp, str_1_memcmp, 1);;
  	printf("%d\n%d\n", res_memcmp, res_1_memcmp);
- 
+/*
     printf("-----------------------------ft_memcpy test--------------------------------------\n");
 
     char str_memcpy[] = "Hello, world!";

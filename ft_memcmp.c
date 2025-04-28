@@ -6,23 +6,20 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 17:27:29 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/26 18:59:21 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/28 20:25:45 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char	*copy_s1;
-	unsigned char	*copy_s2;
-	size_t			i;
+	const unsigned char	*copy_s1;
+	const unsigned char	*copy_s2;
+	size_t				i;
 
-	copy_s1 = (unsigned char *)s1;
-	copy_s2 = (unsigned char *)s2;
+	copy_s1 = (const unsigned char *)s1;
+	copy_s2 = (const unsigned char *)s2;
 	i = 0;
 	while (i < n)
 	{
@@ -32,15 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-// int	main(void)
-// {
-// 	char	str[] = "abc";
-// 	char	str_1[] = "ABC";
-// 	int		res;
-// 	int		res_1;
-
-// 	res = ft_memcmp(str, str_1, 3);
-// 	res_1 = memcmp(str, str_1, 3);
-// 	printf("%d\n%d\n", res, res_1);
-// }
