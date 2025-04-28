@@ -17,13 +17,13 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-
+/*
 
 int	main(void)
 {
 	
 
-	/*
+	
 	printf("-----------------------------ft_atoi test--------------------------------------\n");
 	printf("\"12345\" => ft_atoi: %d | atoi: %d\n", ft_atoi("12345"),
 		atoi("12345"));
@@ -183,10 +183,104 @@ int	main(void)
 	
 	printf("-----------------------------ft_itoa test--------------------------------------\n");
 	
-    printf("\"69699\" => ft_itoa: %s | itoa: %s\n", ft_itoa(69699), itoa(69699));
-    printf("\"-999\" => ft_itoa: %s | itoa: %s\n", ft_itoa(-999), itoa(-999));
-    printf("\"0\" => ft_itoa: %s | itoa: %s\n", ft_itoa(0), itoa(0));
-    printf("\"-2147483648\" => ft_itoa: %s | itoa: %s\n", ft_itoa(-2147483648), itoa(-2147483648));
-    printf("\"999999999\" => ft_itoa: %s | itoa: %s\n", ft_itoa(999999999), itoa(999999999));
-*/    
+    printf("%s %s %s %s %s\n", ft_itoa(69699), ft_itoa(-999), ft_itoa(0), ft_itoa(-2147483648), ft_itoa(999999999));
+
+    printf("-----------------------------ft_memchr test--------------------------------------\n");
+
+    char	str_memchr[] = "To begin,you must 1 reimplement a set of functions libc.";
+ 	char	*ptr_memchr = ft_memchr(str_memchr, 't', strlen(str_memchr));
+ 	char	*ptr_1_memchr = memchr(str_memchr, 't', strlen(str_memchr));
+ 	
+ 	printf("%s\n%s\n", ptr_memchr, ptr_1_memchr);
+
+    printf("-----------------------------ft_memcmp test--------------------------------------\n");
+
+   
+ 
+ 	char	str_memcmp[] = "abc";
+ 	char	str_1_memcmp[] = "ABC";
+ 	int		res_memcmp = ft_memcmp(str_memcmp, str_1_memcmp, 3);
+ 	int		res_1_memcmp = memcmp(str_memcmp, str_1_memcmp, 3);;
+ 	printf("%d\n%d\n", res_memcmp, res_1_memcmp);
+ 
+    printf("-----------------------------ft_memcpy test--------------------------------------\n");
+
+    char str_memcpy[] = "Hello, world!";
+	char dest_memcpy[20];
+	char str_1_memcpy[] = "Hello, world!";
+	char dest_1_memcpy[20];
+
+	ft_memcpy(dest_memcpy, str_memcpy, strlen(str_memcpy) + 1);
+	memcpy(dest_1_memcpy, str_1_memcpy, strlen(str_1_memcpy) + 1);
+	printf("ft_memcpy result: %s\n", dest_memcpy);
+	printf("memcpy result: %s\n", dest_1_memcpy);
+
+    printf("Original string with overlap: %s\n", str_memcpy);
+    ft_memcpy(str_memcpy + 2, str_memcpy, 5); 
+	memcpy(str_1_memcpy + 2, str_1_memcpy, 5);
+    printf("After ft_memcpy (overlap): %s\n", str_memcpy);
+	printf("After memcpy (overlap): %s\n", str_1_memcpy);
+
+    printf("-----------------------------ft_memmove test--------------------------------------\n");
+    char src2[] = "Hello, world!";
+    printf("Before overlapping memmove:\n");
+    printf("src2: \"%s\"\n", src2);
+
+    ft_memmove(src2 + 2, src2, 5);
+    printf("After overlapping ft_memmove:\n");
+    printf("src2: \"%s\"\n", src2);
+
+    printf("-----------------------------ft_memset test--------------------------------------\n");
+    char str_memset[50] = "ehal greka  cherez reku";
+	char str_1_memset[50] = "ehal greka  cherez reku";
+	memset(str_memset, 'O', 6);
+	ft_memset(str_1_memset, 'O', 6);
+	printf("after memset: %s\n", str_memset);
+	printf("after ft_memset: %s\n", str_1_memset);
+
+    printf("-----------------------------ft_split test--------------------------------------\n");
+
+    char const	*str_split;
+	char		sep_split;
+	char		**words_split;
+	int			i;
+
+	str_split = "ehal greka cherez reku";
+	sep_split = ' ';
+	words_split = ft_split(str_split, sep_split);
+	i = 0;
+	while (words_split[i])
+	{
+		printf("%s\n", words_split[i]);
+		free(words_split[i]);
+		i++;
+	}
+	free(words_split);
+
+    printf("-----------------------------ft_strchr test--------------------------------------\n");
+
+   
+	char	str_strchr[] = "function returns a pointer";
+	char	c_strchr = 'r';
+	char	*ptr_strchr = ft_strchr(str_strchr, c_strchr);
+	char	*pt_strchr = strchr(str_strchr, c_strchr);
+
+	if (ptr_strchr)
+		printf("ft_strchr: %s\n", ptr_strchr);
+	else
+		printf("ft_strchr: NULL\n");
+	if (pt_strchr)
+		printf("strchr: %s\n", pt_strchr);
+	else
+		printf("strchr: NULL\n");
+	
+
+    printf("-----------------------------ft_strdup test--------------------------------------\n");
+    const char *str_dup = "";
+	char *res_dup = ft_strdup(str_dup);
+	printf("Original: %s\n", str_dup);
+	printf("Dup: %s\n",res_dup);
+	free(res_dup);
+
 }
+*/

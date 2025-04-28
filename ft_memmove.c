@@ -6,23 +6,23 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 14:25:21 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/24 14:00:58 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/28 12:39:47 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//#include <stdio.h>
+#include <stdio.h>
 
 /*copies n bytes from src to dest, may overlap*/
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char	*copy_dest;
-	unsigned char	*copy_src;
+	const unsigned char	*copy_src;
 	size_t			i;
 
 	copy_dest = (unsigned char *)dest;
-	copy_src = (unsigned char *)src;
+	copy_src = (const unsigned char *)src;
 	i = 0;
 	if (copy_dest < copy_src)
 	{
@@ -42,17 +42,14 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-/*
+
 int	main(void)
 {
-	char	src[30] = "abcdefghij";
-	char	dest[30] = "12345655";
-	char	src_1[30] = "123456789";
-	char	src_2[30] = "1234567";
+	char src2[] = "Hello, world!";
+    printf("Before overlapping memmove:\n");
+    printf("src2: \"%s\"\n", src2);
 
-	ft_memmove(dest, src, 5);
-	ft_memmove(src_1 + 5, src_1, 5);
-	ft_memmove(src_2, src_2 + 3, 5);
-	printf("%s\n%s\n%s\n", dest, src_1, src_2);
+    ft_memmove(src2 + 2, src2, 5);
+    printf("After overlapping ft_memmove:\n");
+    printf("src2: \"%s\"\n", src2);
 }
-*/
