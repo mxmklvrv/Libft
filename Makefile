@@ -43,13 +43,14 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
-re:
-	fclean all
+	rm -f .bonus
+	
+re: fclean all
 
 bonus: .bonus
 
-bonus: $(OBJ) $(BONUSOBJ)
+.bonus: $(OBJ) $(BONUSOBJ)
 	@touch .bonus
 	ar rcs $(NAME) $(OBJ) $(BONUSOBJ)
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus

@@ -6,12 +6,13 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 18:32:50 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/28 20:26:03 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/29 19:40:22 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <stdlib.h>
 # include <unistd.h>
 
