@@ -6,14 +6,14 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 12:58:05 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/29 11:30:17 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/29 18:14:10 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// creates a new string by applying a function f 
-// to each character of the input string s
+/*creates a new string by applying a function f
+to each character of the input string s*/
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -36,4 +36,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-

@@ -6,11 +6,17 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 15:11:07 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/26 17:10:13 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/29 17:41:14 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*Iterates through the list ’lst’, applies the
+function ’f’ to each node’s content, and creates
+a new list resulting of the successive applications
+of the function ’f’. The ’del’ function is used to
+delete the content of a node if needed.*/
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {

@@ -6,13 +6,13 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 15:42:12 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/29 13:28:54 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/29 18:13:26 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Converts upcase to lowcase
+/*Converts upcase to lowcase*/
 
 int	ft_tolower(int c)
 {

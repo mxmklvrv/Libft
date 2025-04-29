@@ -6,14 +6,14 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 14:23:49 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/28 20:48:15 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/29 17:54:00 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// copies n bytes from memory area src to memory area dest.
-// The memory areas must not overlap.
+/*copies n bytes from memory area src to memory area dest.
+The memory areas must not overlap.*/
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

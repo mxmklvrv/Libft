@@ -6,13 +6,13 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 15:16:14 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/29 13:28:53 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/29 18:13:40 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Converts low to up
+/*Converts low to up*/
 
 int	ft_toupper(int c)
 {

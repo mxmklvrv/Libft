@@ -6,15 +6,15 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 16:27:04 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/29 12:34:20 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/29 18:13:54 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// removes chars from set from start and end of s1.
-// returns a copy of s1. 
- 
+/*removes chars from set from start and end of s1.
+returns a copy of s1.*/
+
 static int	to_trim(char c, char const *set)
 {
 	int	i;

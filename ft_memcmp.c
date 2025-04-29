@@ -6,11 +6,14 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 17:27:29 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/28 20:25:45 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/29 17:53:39 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*function compares the first n bytes (each interpreted as unsignedchar)
+of the memory areas s1 and s2.*/
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

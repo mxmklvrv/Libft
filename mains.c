@@ -314,7 +314,7 @@ int	main(void)
 	free(s3_join);
 	free(s4_join);
 	free(s5_join);
-*/
+
     printf("-----------------------------ft_strlcat test--------------------------------------\n");
     char	dst_strlcat[67] = "odin";
 	char	*src_strlcat;
@@ -455,7 +455,7 @@ int	main(void)
 
     printf("-----------------------------ft_lstadd_front test--------------------------------------\n");
 
-   
+*/
 
 
 }

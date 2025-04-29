@@ -6,17 +6,17 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 16:24:18 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/29 13:23:36 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/29 18:13:12 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Returns a substring from the string s
-// starting at index start, up to len characters.
-// If start index is beyond the string, return an empty string.
-// if len > chars to copy, updating the len so 
-// don’t read past the end of the string
+/*Returns a substring from the string s
+starting at index start, up to len characters.
+If start index is beyond the string, return an empty string.
+if len > chars to copy, updating the len so
+don’t read past the end of the string*/
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -43,4 +43,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[i] = '\0';
 	return (str);
 }
-

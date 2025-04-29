@@ -6,15 +6,15 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 16:07:18 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/29 11:19:43 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/29 18:14:02 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Copies up to size - 1 char. NULL terminate the result. 
-// Returns the total length of src, what it tried to copy.
-// Detect whether truncation happened or no. 
+/*Copies up to size - 1 char. NULL terminate the result.
+Returns the total length of src, what it tried to copy.
+Detect whether truncation happened or no.*/
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

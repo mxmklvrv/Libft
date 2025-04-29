@@ -6,11 +6,14 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 14:53:30 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/26 19:05:40 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/29 16:24:53 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*Deletes and frees the given node and all its
+successors. Set the pointer to the list to NULL.*/
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {

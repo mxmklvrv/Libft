@@ -6,14 +6,14 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 17:53:32 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/28 16:44:53 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/29 17:47:01 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// erases the data in the n bytes of the memory
-// starting at the location pointed to by s, by 0.
+/* erases the data in the n bytes of the memory
+starting at the location pointed to by s, by 0.*/
 
 void	ft_bzero(void *s, size_t n)
 {

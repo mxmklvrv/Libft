@@ -6,13 +6,13 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 12:45:08 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/29 13:37:47 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/29 17:57:40 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Outputs int n to specified fd
+/*Outputs int n to specified fd*/
 
 void	ft_putnbr_fd(int n, int fd)
 {

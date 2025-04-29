@@ -6,13 +6,13 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 14:25:21 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/28 20:48:19 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/29 17:54:32 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// copies n bytes from src to dest, may overlap
+/*copies n bytes from src to dest, may overlap*/
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

@@ -6,14 +6,14 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 16:58:08 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/28 19:58:58 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/29 17:52:25 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// scans the initial n bytes of the memory area for the first instance of c.
-// casted to unsigned chars to prevent negative values
+/*scans the initial n bytes of the memory area for the first instance of c.
+casted to unsigned chars to prevent negative values*/
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
