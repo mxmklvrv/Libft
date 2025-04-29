@@ -6,11 +6,14 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 18:51:51 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/25 20:57:46 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/29 14:04:06 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// Creating a new node, link and sets its member var content to param content
+// Setting the member var next to point to NULL
 
 t_list	*ft_lstnew(void *content)
 {
