@@ -6,31 +6,15 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 12:58:05 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/24 13:36:30 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/29 11:30:17 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-char	upper(unsigned int i, char c)
-{
-	(void)i;
-	if (c >= 97 && c <= 122)
-		return (c - 32);
-	return (c);
-}
-size_t	ft_strlen(const char *str)
-{
-	size_t	len;
 
-	len = 0;
-	while (str[len])
-		len++;
-	return (len);
-}
-*/
+// creates a new string by applying a function f 
+// to each character of the input string s
 
-/*Applying a function to each char of s**/
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
@@ -52,25 +36,4 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-/*
-#include <stdio.h>
 
-
-int main (void)
-{
-	char const	*s;
-	char		*res;
-
-	s = "ehal greka cherez reku";
-	res = ft_strmapi(s, upper);
-	if ( res != NULL)
-	{
-		printf("Original: %s\n", s);
-		printf("Res  : %s\n", res);
-		free(res);
-	}
-	else
-		printf("Faild");
-	return (0);
-}
-*/
