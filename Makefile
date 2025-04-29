@@ -46,7 +46,10 @@ fclean: clean
 re:
 	fclean all
 
+bonus: .bonus
+
 bonus: $(OBJ) $(BONUSOBJ)
+	@touch .bonus
 	ar rcs $(NAME) $(OBJ) $(BONUSOBJ)
 
 .PHONY: all clean fclean re
