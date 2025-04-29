@@ -6,11 +6,15 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 16:08:52 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/28 21:08:03 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/29 11:03:13 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// appends the src string to the end of dst
+// ensuring that the resulting string does not exceed size bytes.
+// returns the total length of the string it tried to create.
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
