@@ -6,11 +6,17 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 16:24:18 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/26 19:11:34 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/29 13:23:36 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// Returns a substring from the string s
+// starting at index start, up to len characters.
+// If start index is beyond the string, return an empty string.
+// if len > chars to copy, updating the len so 
+// don’t read past the end of the string
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -38,27 +44,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (str);
 }
 
-/*
-#include <stdio.h>
-
-int main (void)
-{
-	char	*str;
-	char	*sub1;
-	char	*sub2;
-	char	*sub3;
-	char	*sub4;
-
-	str = "Jason Statham";
-	sub1 = ft_substr(str, 6, 7);
-	sub2 = ft_substr(str, 20, 5);
-	sub3 = ft_substr("", 0, 5);
-	sub4 = ft_substr(str, 6, 50);
-	printf("%s\n%s\n%s\n%s\n", sub1, sub2, sub3, sub4);
-	free(sub1);
-	free(sub2);
-	free(sub3);
-	free(sub4);
-	return (0);
-}
-*/
