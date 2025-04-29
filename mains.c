@@ -10,7 +10,13 @@ void	upper(unsigned int i, char *c)
 	if (*c >= 97 && *c <= 122)
 		*c = *c - 32;
 }
-
+char	ft_upper(unsigned int i, char c)
+{
+	(void)i;
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	return (c);
+}
 
 
 
@@ -309,16 +315,149 @@ int	main(void)
 	free(s4_join);
 	free(s5_join);
 */
-    printf("-----------------------------ft_strjoin test--------------------------------------\n");
-    char	dst[67] = "odin";
-	char	*src;
-	size_t	res;
+    printf("-----------------------------ft_strlcat test--------------------------------------\n");
+    char	dst_strlcat[67] = "odin";
+	char	*src_strlcat;
+	size_t	res_strlcat;
 
-	src = "dva";
-	res = ft_strlcat(dst, src, sizeof(dst));
-	printf("%s\n", dst);
-	printf("%zu", res);
+	src_strlcat = "dva";
+	res_strlcat = ft_strlcat(dst_strlcat, src_strlcat, sizeof(dst_strlcat));
+	printf("%s\n", dst_strlcat);
+	printf("%d", res_strlcat);
+
+    printf("-----------------------------ft_strlcpy test--------------------------------------\n");
+
+    char	src_strlcpy[] = "odin dva tri";
+	char	dst_strlcpy[7];
+	size_t	len_strlcpy;
+
+	len_strlcpy =  ft_strlcpy(dst_strlcpy, src_strlcpy, sizeof(dst_strlcpy));
+	printf("%d", len_strlcpy);
+	printf("%s", dst_strlcpy);
+
+    printf("-----------------------------ft_strmapi test--------------------------------------\n");
+
+    char const	*s_mapi = "ehal greka cherez reku";
+	char		*res__mapi = ft_strmapi(s_mapi, ft_upper);
+	printf("Original: %s\n", s_mapi);
+	printf("Res  : %s\n", res__mapi);
+	free(res__mapi);
+
+    printf("-----------------------------ft_strncmp test--------------------------------------\n");
+
+    printf("ft_strncmp: \n");
+	printf("%d\n", ft_strncmp("abc", "abd", 3)); 
+	printf("%d\n", ft_strncmp("abc", "abc", 3)); 
+	printf("%d\n", ft_strncmp("abc", "ab", 3)); 
+	printf("strncmp: \n");
+	printf("%d\n", strncmp("abc", "abd", 3)); 
+	printf("%d\n", strncmp("abc", "abc", 3)); 
+	printf("%d\n", strncmp("abc", "ab", 3)); 
+
+    printf("-----------------------------ft_strnstr test--------------------------------------\n");
+
+    printf("%s\n", ft_strnstr("Hello world", "world", 11));
+	printf("%s\n", ft_strnstr("Hello world", "world", 5));
+	printf("%s\n", ft_strnstr("abc", "", 3));
+	printf("%s\n", ft_strnstr("abcdef", "def", 6));
+	printf("%s\n", ft_strnstr("abcdef", "def", 5));
+
+    printf("-----------------------------ft_strrchr test--------------------------------------\n");
+
+    char	str_rchr[] = "function returns a pointer";
+	char	c_rchr = 'i';
+	char	*ptr_rchr = ft_strrchr(str_rchr, c_rchr);
+	char	*pt_rchr = strrchr(str_rchr, c_rchr);
+	printf("ft_strrchr:  %s\n", ptr_rchr);
+	printf("strrchr: %s\n", pt_rchr);
+
+    printf("-----------------------------ft_strtrim test--------------------------------------\n");
+
+    char	*res1_trim = ft_strtrim(" Hello World ", " ");
+	char	*res2_trim = ft_strtrim("xxx-Hello World-xxx", "x-");
+	char	*res3_trim = ft_strtrim("Hello World", "x-");
+	char	*res4_trim = ft_strtrim("Hello World", "");
+	char	*res5_trim = ft_strtrim("?????", "?");
+	char	*res6_trim =  ft_strtrim("", "");
+	char	*res7_trim = ft_strtrim("", " ");
+	char	*res8_trim = ft_strtrim("xxx---Hello World---xxx", "x-");
+
+	printf("%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n", res1_trim, res2_trim, res3_trim, res4_trim, res5_trim,
+		res6_trim, res7_trim, res8_trim);
+	free(res1_trim);
+	free(res2_trim);
+	free(res3_trim);
+	free(res4_trim);
+	free(res5_trim);
+	free(res6_trim);
+	free(res7_trim);
+	free(res8_trim);
+
+    printf("-----------------------------ft_substr test--------------------------------------\n");
+
+    char	*str_sub = "Jason Statham";
+	char	*sub1_sub = ft_substr(str_sub, 6, 7);
+	char	*sub2_sub = ft_substr(str_sub, 20, 5);
+	char	*sub3_sub = ft_substr("", 0, 5);
+	char	*sub4_sub= ft_substr(str_sub, 6, 50);
+
+	printf("%s\n%s\n%s\n%s\n", sub1_sub, sub2_sub, sub3_sub, sub4_sub);
+	free(sub1_sub);
+	free(sub2_sub);
+	free(sub3_sub);
+	free(sub4_sub);
+
+    printf("-----------------------------ft_tolower test--------------------------------------\n");
+
+    printf("%c\n", ft_tolower('A'));
+	printf("%c\n", ft_tolower('Z'));
+	printf("%c\n", ft_tolower('p'));
+	printf("%c\n", ft_tolower('@'));
+	printf("%c\n", ft_tolower('1'));
+
+
+    printf("-----------------------------ft_toupper test--------------------------------------\n");
+
+    printf("%c\n", ft_toupper('a'));
+	printf("%c\n", ft_toupper('z'));
+	printf("%c\n", ft_toupper('U'));
+	printf("%c\n", ft_toupper('%'));
+	printf("%c\n", ft_toupper('1'));
     
+    printf("-----------------------------ft_putchar_fd test--------------------------------------\n");
+    
+    ft_putchar_fd('M', 1);
+
+    printf("-----------------------------ft_putendl_fd test--------------------------------------\n");
+
+    ft_putendl_fd("Korabli lavirovali, lavirovali, da ne vylavirovali", 1);
+	ft_putendl_fd("Vo dvore trava, na trave drova", 1);
+
+    printf("-----------------------------ft_putnum_fd test--------------------------------------\n");
+    
+    ft_putnbr_fd(-2147483648, 1);
+	ft_putchar_fd('\n', 1);
+	ft_putnbr_fd(-123456, 1);
+	ft_putchar_fd('\n', 1);
+	ft_putnbr_fd(0, 1);
+    
+    printf("-----------------------------ft_putstr_fd test--------------------------------------\n");
+
+    ft_putstr_fd("Korabli lavirovali, lavirovali, da ne vylavirovali\n", 1);
+
+    printf("-----------------------------ft_lstnew test--------------------------------------\n");
+
+    char *data_lst = strdup("qwerty");
+    t_list *l = ft_lstnew(data_lst);
+    
+    printf("Content: %s\n", (char *)l->content);
+    printf("Next: %p\n", (void *)l->next);
+
+    printf("-----------------------------ft_lstadd_front test--------------------------------------\n");
+
+   
+
+
 }
 
 
