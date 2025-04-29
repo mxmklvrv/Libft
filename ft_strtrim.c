@@ -6,60 +6,15 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 16:27:04 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/24 14:04:00 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/29 12:34:20 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
-char	*ft_strdup(const char *s)
-{
-	char	*res;
-	int		i;
-	int		len;
-
-	i = 0;
-	len = 0;
-	while (s[len])
-		len++;
-	res = (char *)malloc(sizeof(char) * (len + 1));
-	if (res == NULL)
-		return (NULL);
-	while (i < len)
-	{
-		res[i] = s[i];
-		i++;
-	}
-	res[i] = '\0';
-	return (res);
-}
-size_t	ft_strlcpy(char *dst, const char *src, size_t n)
-{
-	size_t	i;
-
-	i = 0;
-	if (n > 0)
-	{
-		while (src[i] && i < (n - 1))
-		{
-			dst[i] = src[i];
-			i++;
-		}
-		dst[i] = '\0';
-	}
-	return (ft_strlen(src));
-}
-*/
-
+// removes chars from set from start and end of s1.
+// returns a copy of s1. 
+ 
 static int	to_trim(char c, char const *set)
 {
 	int	i;
@@ -98,39 +53,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(t_str, s1 + start, len_t_str + 1);
 	return (t_str);
 }
-/*
-#include <stdio.h>
-#include <stdlib.h>
-
-int	main(void)
-{
-	char	*res1;
-	char	*res2;
-	char	*res3;
-	char	*res4;
-	char	*res5;
-	char	*res6;
-	char	*res7;
-	char	*res8;
-
-	res1 = ft_strtrim(" Hello World ", " ");
-	res2 = ft_strtrim("xxx-Hello World-xxx", "x-");
-	res3 = ft_strtrim("Hello World", "x-");
-	res4 = ft_strtrim("Hello World", "");
-	res5 = ft_strtrim("?????", "?");
-	res6 = ft_strtrim("", "");
-	res7 = ft_strtrim("", " ");
-	res8 = ft_strtrim("xxx---Hello World---xxx", "x-");
-	printf("%s\n", res1);
-	printf("%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n", res1, res2, res3, res4, res5,
-		res6, res7, res8);
-	free(res1);
-	free(res2);
-	free(res3);
-	free(res4);
-	free(res5);
-	free(res6);
-	free(res7);
-	free(res8);
-}
-*/
