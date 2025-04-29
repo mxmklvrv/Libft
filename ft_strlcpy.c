@@ -6,11 +6,15 @@
 /*   By: mklevero <mklevero@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 16:07:18 by mklevero          #+#    #+#             */
-/*   Updated: 2025/04/24 13:36:02 by mklevero         ###   ########.fr       */
+/*   Updated: 2025/04/29 11:19:43 by mklevero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// Copies up to size - 1 char. NULL terminate the result. 
+// Returns the total length of src, what it tried to copy.
+// Detect whether truncation happened or no. 
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
@@ -28,14 +32,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 	return (ft_strlen(src));
 }
-/*
-int	main(void)
-{
-	char	src[] = "odin dva tri";
-	char	dst[7];
-	size_t	len;
-
-	len =  ft_strlcpy(dst, src, sizeof(dst));
-	printf(%d, len);
-}
-*/
