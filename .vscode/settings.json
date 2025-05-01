@@ -34,5 +34,8 @@
 		"tolower",
 		"toupper",
 		"Wextra"
-	]
+	],
+	"files.associations": {
+		"stdio.h": "c"
+	}
 }
